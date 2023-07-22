@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lav2"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lavender"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/baseline_report_problem_24"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Damage Report"
+        app:titleMarginStart="30dp"
+        tools:layout_editor_absoluteX="-107dp" />
+
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="350dp"
+        android:layout_height="71dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="352dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etReport"
+        android:layout_width="352dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Report"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="323dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="56dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etReport"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <!-- Add more UI components for other profile details -->
+</androidx.constraintlayout.widget.ConstraintLayout>
