@@ -13,23 +13,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-//create a class name it "adapter"
 
 public class Adapter extends RecyclerView.Adapter<Adapter.news> {
 
-    //then, create objects like this
-
+   
     Context context;
     List<Model> modelList;
 
-    //then create adapter constructor
+
 
     public Adapter(Context context, List<Model> modelList) {
         this.context = context;
         this.modelList = modelList;
     }
 
-    //then, here you link the contents file that has views
+  
 
     @NonNull
     @Override
@@ -39,7 +37,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.news> {
         return news;
     }
 
-    //then Bind your content with Model class
+
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -51,14 +49,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.news> {
         holder.date.setText( model.getDate());
     }
 
-    //now, get number of items at a specific time
+  
 
     @Override
     public int getItemCount() {
         return modelList.size();
     }
 
-    //now find your views
+ 
 
     public static class news extends RecyclerView.ViewHolder {
         TextView title, reporter, desc, date;
