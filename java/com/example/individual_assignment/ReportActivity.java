@@ -33,7 +33,7 @@ public class ReportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
 
-        // Set up the toolbar
+       
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -64,11 +64,9 @@ public class ReportActivity extends AppCompatActivity {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                // Handle the response
-                // Redirect to MainActivity
                 Intent intent = new Intent(ReportActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish(); // Optional: finish the current activity if needed
+                finish(); 
             }
         }, new Response.ErrorListener() {
             @Override
@@ -93,7 +91,6 @@ public class ReportActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == android.R.id.home) {
-            // Handle toolbar back button click
             onBackPressed();
             return true;
         }
