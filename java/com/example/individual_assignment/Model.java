@@ -7,7 +7,6 @@ public class Model {
     String desc;
     String date;
 
-    //then create an constructor that will be called by MainActivity.java
 
     public Model(String title, String reporter, String desc, String date) {
         this.title = title;
@@ -16,7 +15,6 @@ public class Model {
         this.date = date;
     }
 
-    //then create getter and setter methods
 
 
     public String getTitle() {
